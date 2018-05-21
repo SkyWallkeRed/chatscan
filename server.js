@@ -71,6 +71,6 @@ io.on('connection', function(socket) {
 
 
 //--------------------------------------------------------------------
-http.listen(process.env.PORT, function() {
+app.listen(process.env.PORT || 8888, function() {
     console.log('listening on *:8888');
 });
