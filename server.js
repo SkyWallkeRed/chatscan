@@ -9,10 +9,10 @@ var messages = [];
 app.use(express.static('public'))
     //--------------------------------------------------------------------
 app.get('/home', function(req, res) {
-    res.sendfile(__dirname + '/public/homepage.html');
+    res.sendfile(__dirname + '/public/home.html');
 });
 app.get('/', function(req, res) {
-    res.sendfile(__dirname + '/public/homepage.html');
+    res.sendfile(__dirname + '/public/home.html');
 });
 app.get('/chat', function(req, res) {
     res.sendFile(__dirname + '/public/chat.html');
