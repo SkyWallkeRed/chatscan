@@ -6,16 +6,21 @@ var io = require('socket.io')(http);
 //---------------------data collectors--------------------------------
 var messages = [];
 //--------------------------------------------------------------------
-app.use(express.static('public'))
+app.use(express.static('public'));
+// app.use(express.static('build'));
+// app.use(express.static('models'));
     //--------------------------------------------------------------------
 app.get('/home', function(req, res) {
-    res.sendfile(__dirname + '/public/home.html');
+    res.sendFile(__dirname + '/public/home.html');
 });
 app.get('/', function(req, res) {
-    res.sendfile(__dirname + '/public/home.html');
+    res.sendFile(__dirname + '/public/home.html');
 });
 app.get('/chat', function(req, res) {
     res.sendFile(__dirname + '/public/chat.html');
+});
+app.get('/vidchat', function(req, res) {
+    res.sendFile(__dirname + '/public/vidchat.html');
 });
 //--------------------------------------------------------------------
 //collects chat msgs to chat arr
@@ -63,6 +68,7 @@ io.on('connection', function(socket) {
 //--------------------------------------------------------------------
 //send the message to everyone, including the sender.
 io.on('connection', function(socket) {
+    debugger
     socket.on('chat message', function(msg) {
         io.emit('chat message', msg);
     });

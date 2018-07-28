@@ -12,6 +12,11 @@
     "dependencies": {
         "express": "^4.15.2",
         "jquery": "^3.3.1",
-        "socket.io": "^2.1.1"
+        "socket.io": "^2.1.1",
+        "jsfeat": "git+https://github.com/inspirit/jsfeat",
+        "numeric": "^1.2.6",
+        "mosse": "^0.1.1",
+        "raf": "^3.3.2",
+        "promise-polyfill": "^6.0.2"
     }
 }
