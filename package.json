@@ -11,7 +11,7 @@
     "license": "ISC",
     "dependencies": {
         "express": "^4.15.2",
-        "jquery": "^3.3.1",
+        "jquery": "^3.4.0",
         "socket.io": "^2.1.1",
         "jsfeat": "git+https://github.com/inspirit/jsfeat",
         "numeric": "^1.2.6",
